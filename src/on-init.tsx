@@ -2,14 +2,20 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "./styles.css";
+import RadarChart from "./components/RadarChart/index";
+import { getMetricValue } from "@gapit/grafana-metric";
 
 interface State {
-  data: PanelData;
+  values: unknown[][];
 }
 
 class App extends Component<{}, State> {
   constructor(props: {}) {
     super(props);
+
+    this.state = {
+      values: [],
+    };
 
     this.onPanelUpdate = this.onPanelUpdate.bind(this);
   }
@@ -23,12 +29,17 @@ class App extends Component<{}, State> {
   }
 
   onPanelUpdate() {
-    this.setState({ data: data });
+    const values = customProperties.radar.data.map((data) =>
+      data.metrics.map((metricName) =>
+        getMetricValue(metricName, customProperties.showcase, [-20, 40], 1)
+      )
+    );
+
+    this.setState({ values: values });
   }
 
   render() {
-    const value = data.series[0]?.fields[1]?.state.calcs?.last;
-    return <div>Value: {value ?? "No data"}</div>;
+    return <RadarChart values={this.state.values} />;
   }
 }
 
