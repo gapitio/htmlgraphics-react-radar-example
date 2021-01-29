@@ -1,0 +1,41 @@
+{
+  "showcase": false,
+  "radar": {
+    "points": 7,
+    "length": 223,
+    "center": {
+      "x": 315,
+      "y": 351.5
+    },
+    "maxAllowed": 223,
+    "minAllowed": 0,
+    "max": 40,
+    "min": -30,
+    "data": [
+      {
+        "name": "inside",
+        "metrics": [
+          "inside-monday",
+          "inside-tuesday",
+          "inside-wednesday",
+          "inside-thursday",
+          "inside-friday",
+          "inside-saturday",
+          "inside-sunday"
+        ]
+      },
+      {
+        "name": "outside",
+        "metrics": [
+          "outside-monday",
+          "outside-tuesday",
+          "outside-wednesday",
+          "outside-thursday",
+          "outside-friday",
+          "outside-saturday",
+          "outside-sunday"
+        ]
+      }
+    ]
+  }
+}
