@@ -4,7 +4,7 @@ import replace from "@rollup/plugin-replace";
 import typescript from "rollup-plugin-typescript2";
 import livereload from "rollup-plugin-livereload";
 import json from "@rollup/plugin-json";
-import css from "rollup-plugin-css-only";
+import postcss from "rollup-plugin-postcss";
 
 const OUT_DIR = "public/build";
 
@@ -52,7 +52,9 @@ export default [
         "process.env.NODE_ENV": JSON.stringify("development"),
       }),
       commonjs(),
-      css({ output: "bundle.css" }),
+      postcss({
+        extract: "bundle.css",
+      }),
       json({
         preferConst: true,
       }),

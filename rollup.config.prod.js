@@ -4,7 +4,7 @@ import replace from "@rollup/plugin-replace";
 import typescript from "rollup-plugin-typescript2";
 import { terser } from "rollup-plugin-terser";
 import json from "@rollup/plugin-json";
-import css from "rollup-plugin-css-only";
+import postcss from "rollup-plugin-postcss";
 
 const OUT_DIR = "dist";
 
@@ -27,7 +27,9 @@ export default [
         "process.env.NODE_ENV": JSON.stringify("production"),
       }),
       commonjs(),
-      css({ output: "bundle.css" }),
+      postcss({
+        extract: "bundle.css",
+      }),
       json({
         preferConst: true,
       }),

@@ -31,7 +31,11 @@ class App extends Component<{}, State> {
   onPanelUpdate() {
     const values = customProperties.radar.data.map((data) =>
       data.metrics.map((metricName) =>
-        getMetricValue(metricName, customProperties.showcase, [-20, 40], 1)
+        getMetricValue(metricName, {
+          showcase: customProperties.showcase,
+          range: { min: -20, max: 40 },
+          decimals: 1,
+        })
       )
     );
 
