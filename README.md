@@ -1,8 +1,7 @@
-# Bundler
+# React radar
 
-Bundler to make developing code easier and scalable.
-
-There is no weird code styles, because most of the configuration is as basic as it can be. A good example of this is by looking at the `.prettierrc.json` file.
+A react radar which displays temperature through the week.
+The metric names are inside-monday to inside-sunday and outside-monday to outside-sunday. Metric names can be changed in the custom properties.
 
 ## Table of contents
 
