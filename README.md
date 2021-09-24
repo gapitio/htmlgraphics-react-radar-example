@@ -18,7 +18,6 @@ The metric names are inside-monday to inside-sunday and outside-monday to outsid
 - [Prettier](https://prettier.io/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [ESLint](https://eslint.org/)
-- [SVGO](https://github.com/svg/svgo)
 - Local development server to run the code live in the browser.
 
 ## Usage
