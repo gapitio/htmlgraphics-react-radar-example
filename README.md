@@ -3,9 +3,11 @@
 A react radar which displays temperature through the week.
 The metric names are inside-monday to inside-sunday and outside-monday to outside-sunday. Metric names can be changed in the custom properties.
 
+![React radar](https://raw.githubusercontent.com/gapitio/htmlgraphics-react-radar/master/img/react-radar.png)
+
 ## Table of contents
 
-- [Bundler](#bundler)
+- [React radar](#react-radar)
   - [Table of contents](#table-of-contents)
   - [Contains](#contains)
   - [Usage](#usage)
